@@ -8,121 +8,15 @@
     <link href='http://fonts.googleapis.com/css?family=Alfa+Slab+One' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Neuton:400,700,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Anonymous+Pro' rel='stylesheet' type='text/css'>
+    <link href="css/style.css">
+    
+    <!-- This is an example of jQuery.pin in use. Check the very bottom for the javascript. -->
 
-    <style>
-      * {
-        -webkit-box-sizing: border-box;
-           -moz-box-sizing: border-box;
-             ms-box-sizing: border-box;
-                box-sizing: border-box;
-      }
-      body {
-        font-family: 'Neuton', serif;
-        font-size: 24px;
-        margin: 0;
-        padding: 0;
-      }
-      h1, h2, h3, h4, h5, h6 {
-        font-family: 'Alfa Slab One', cursive;
-        font-weight: 400;
-      }
-      h1 {
-        font-size: 72px;
-        margin-bottom: 0;
-      }
-      h2 {
-        font-size: 48px;
-        margin: 72px 0 0;
-      }
-      a, a:visited, a:active {
-        text-decoration: none;
-        color: rgb(84, 143, 207);
-      }
-      a:hover {
-        color: rgb(117, 174, 236);
-      }
-      pre {
-        margin: 32px 0;
-        padding: 32px 18px;
-        background: #efefef;
-      }
-      code {
-        font-family: 'Anonymous Pro', monospace;
-      }
-      
-      footer {
-        margin-top: 72px;
-        font-size: 16px;
-        padding: 20px 0;
-        background: #222;
-      }
-      footer a, footer a:visited, footer a:active {
-        color: #efefef;
-      }
-      footer a:hover {
-        color: #fff;
-      }
-      
-      p.lead {
-        font-size: 32px;
-        margin-top: 18px;
-      }
-      .wrapper {
-        max-width: 940px;
-        margin: 0 auto;
-      }
-      .note-container {
-        margin-top: 10px;
-      }
-      .note {
-        padding: 18px 20px;
-        background: #eee;
-        text-decoration:none;
-        color:#000;
-        background:#ffc;
-        display:block;
-        padding: 20px;
-        width: 210px;        
-        box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-        -webkit-transform: rotate(-6deg);
-           -moz-transform: rotate(-6deg);
-            -ms-transform: rotate(-6deg);
-                transform: rotate(-6deg);
-        font-size: 18px;
-      }
-      .note h3 {
-        font-size: 32px;
-        margin: 0;
-      }
-      
-      .container { overflow: hidden; }
-      .row {}
-      .left-col {
-        float: left;
-        width: 70%;
-        padding-right: 20px;
-      }
-      .right-col {
-        float: left;
-        width: 30%;
-        padding-left: 20px;
-      }
-      .left-col img { width: 100%; }
-      .text-right { text-align: right; }
-      .gallery .container { margin: 72px 0; }
-      .left-nav .left-col { width: 20%; }
-      .left-nav .right-col { width: 80%; }
-      .left-nav .nav {
-        margin: 136px 0 0;
-        padding: 0;
-        list-style: none;
-      }
-    </style>
   </head>
   <body>
     <header>
       <div class="wrapper">
-        <h1 class="logo">jQuery.Pin</h1>
+        <h1 class="logo"><span>jQuery</span>.Pin</h1>
       </div>
     </header>
     <div class="wrapper">
@@ -139,14 +33,18 @@
             </p>
             <h2>Grab the plugin</h2>
             <p>
-              Download <a href="https://raw.github.com/webpop/jquery.pin/gh-pages/jquery.pin.js">jquery.pin.js</a> from <a href="https://github.com/webpop/jquery.pin">our Github repo</a>.
+              Download <a href="https://raw.github.com/webpop/jquery.pin/gh-pages/jquery.pin.js">jquery.pin.js</a> from <a href="https://github.com/webpop/jquery.pin">our Github repo</a>. Then include jQuery and jQuery pin at the bottom of your HTML.
               </p>
             <h2>Pin an element:</h2>
             <pre><code>$(".pinned").pin()</code></pre>
             <h2>Pin within a container</h2>
             <pre><code>$(".pinned").pin({
       containerSelector: ".container"
-  })</code></pre>
+})</code></pre>
+            <h2>Disable on small screens</h2>
+            <pre><code>$(".pinned").pin({
+      minWidth: 940
+})</pre></code>
           </div>
           <div class="right-col">
             <div class="pinned note-container">
@@ -182,23 +80,28 @@
           <div class="row">
             <div class="left-col">
               <ul class="nav pinned">
-                <li><a href="#">Link one</a></li>
-                <li><a href="#">Link two</a></li>
-                <li><a href="#">Link three</a></li>
+                <li><a href="#link-one">Link one</a></li>
+                <li><a href="#link-two">Link two</a></li>
+                <li><a href="#link-three">Link three</a></li>
               </ul>
             </div>
             <div class="right-col">
               <h2>Want a sticky left menu?</h2>
               <p class="lead">Just like the <a href="http://www.webpop.com/docs">Webpop documentation</a>? <strong>Pin</strong> it and relax.</p>
-              <p>Macaroon donut tiramisu gummies. Jelly halvah oat cake pastry lemon drops apple pie tart. Muffin tart donut tiramisu. Lollipop tiramisu danish cupcake topping macaroon powder. Topping candy carrot cake halvah tiramisu sesame snaps donut lollipop jelly beans. Cotton candy biscuit jelly-o jelly-o. Gummies jelly beans croissant powder. Chocolate cake marzipan halvah cupcake pudding sesame snaps.</p>
-              <p>Ice cream chocolate bar sweet roll chupa chups gummies soufflé lemon drops chocolate bar. Pie donut tiramisu gingerbread candy canes carrot cake sweet lollipop tart. Danish wafer pudding oat cake croissant oat cake cupcake. Dessert brownie halvah bear claw oat cake sesame snaps pudding lollipop. Tiramisu bear claw sesame snaps cheesecake powder. Topping gummies soufflé fruitcake cake pudding wafer. Candy pie tiramisu jelly beans.</p>
-              <p>Donut sweet jelly chocolate cake icing topping croissant bonbon wafer. Tootsie roll lemon drops tiramisu muffin croissant danish. Sesame snaps soufflé wypas cookie tiramisu. Biscuit biscuit croissant fruitcake danish caramels jelly beans. Wafer muffin gingerbread cookie macaroon. Pastry lollipop croissant sweet cotton candy chocolate cake jelly-o sugar plum. Carrot cake gingerbread ice cream pastry. Gummi bears soufflé bonbon ice cream cake biscuit brownie powder. Gummi bears cake chocolate bar pastry topping gummi bears marzipan soufflé danish.</p>
+              <p id="link-one">Macaroon donut tiramisu gummies. Jelly halvah oat cake pastry lemon drops apple pie tart. Muffin tart donut tiramisu. Lollipop tiramisu danish cupcake topping macaroon powder. Topping candy carrot cake halvah tiramisu sesame snaps donut lollipop jelly beans. Cotton candy biscuit jelly-o jelly-o. Gummies jelly beans croissant powder. Chocolate cake marzipan halvah cupcake pudding sesame snaps.</p>
+              <p id="link-two">Ice cream chocolate bar sweet roll chupa chups gummies soufflé lemon drops chocolate bar. Pie donut tiramisu gingerbread candy canes carrot cake sweet lollipop tart. Danish wafer pudding oat cake croissant oat cake cupcake. Dessert brownie halvah bear claw oat cake sesame snaps pudding lollipop. Tiramisu bear claw sesame snaps cheesecake powder. Topping gummies soufflé fruitcake cake pudding wafer. Candy pie tiramisu jelly beans.</p>
+              <p id="link-three">Donut sweet jelly chocolate cake icing topping croissant bonbon wafer. Tootsie roll lemon drops tiramisu muffin croissant danish. Sesame snaps soufflé wypas cookie tiramisu. Biscuit biscuit croissant fruitcake danish caramels jelly beans. Wafer muffin gingerbread cookie macaroon. Pastry lollipop croissant sweet cotton candy chocolate cake jelly-o sugar plum. Carrot cake gingerbread ice cream pastry. Gummi bears soufflé bonbon ice cream cake biscuit brownie powder. Gummi bears cake chocolate bar pastry topping gummi bears marzipan soufflé danish.</p>
               <p>Brownie topping cake oat cake liquorice bear claw candy canes tiramisu apple pie. Pudding oat cake sugar plum sweet roll gingerbread. Cake jelly-o candy canes dragée. Tiramisu sugar plum cupcake cotton candy tootsie roll sweet. Jujubes gingerbread donut fruitcake cheesecake sweet roll soufflé. Tootsie roll donut sesame snaps marzipan candy carrot cake chocolate cake. Tootsie roll applicake chupa chups. Caramels wafer gummies chocolate pastry liquorice apple pie chocolate chocolate. Fruitcake lollipop cupcake apple pie pie dessert powder cotton candy bear claw. Dragée muffin caramels gummi bears sesame snaps wypas cheesecake oat cake.</p>
               <p>Gummies jelly-o oat cake. Oat cake dessert muffin apple pie carrot cake halvah chocolate cake. Ice cream faworki fruitcake. Lemon drops fruitcake marshmallow oat cake apple pie. Jelly danish pastry liquorice halvah tart gingerbread. Soufflé sweet soufflé biscuit sesame snaps jelly beans liquorice dessert apple pie. Cake ice cream candy toffee croissant sesame snaps topping candy. Halvah dessert macaroon sweet halvah marzipan caramels cake.</p>
             </div>
           </div>
         </div>
       </section>
+    </div>
+    
+    <div class="wrapper text-center">
+      <a href="https://github.com/webpop/jquery.pin" class="button">Get it now!</a>
+      <small>What are you waiting for?</small>
     </div>
 
     <footer>
@@ -214,12 +117,11 @@
       </div>
     </footer>
     
-    <a href="https://github.com/webpop/jquery.pin"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png" alt="Fork me on GitHub"></a>    
-    
+<a href="https://github.com/you"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="jquery.pin.js"></script>
     <script>
-      $(".pinned").pin({containerSelector: ".container"});
+      $(".pinned").pin({containerSelector: ".container", minWidth: 940});
     </script>
   </body>
 </html>

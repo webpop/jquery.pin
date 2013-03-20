@@ -9,7 +9,7 @@
         var $this = elements[i],
             data  = {};
 
-        if ($(window).width() <= 940) {
+        if (options.minWidth && $(window).width() <= options.minWidth) {
           if ($this.parent().is(".pin-wrapper")) { $this.unwrap(); }
           $this.css({width: "", left: "", top: "", position: ""});
           disabled = true;
