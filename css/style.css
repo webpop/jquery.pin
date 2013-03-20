@@ -44,7 +44,6 @@ code {
 }
 header {
   background: rgba(4, 18, 27, 0.88);
-  overflow: hidden;
   padding-bottom: 48px;
   border-bottom: 1px solid rgb(219,216,199);
   box-shadow: 0 2px 8px rgb(219,216,199);
@@ -60,6 +59,10 @@ footer a, footer a:visited, footer a:active, .nav a, .nav a:visited, .nav a:acti
 }
 footer a:hover, .nav a:hover {
   color: rgb(247, 246, 237);
+}
+
+header .wrapper {
+  position: relative;
 }
 
 p.lead {
@@ -91,6 +94,11 @@ p.lead {
   width: 113px;
   display: inline-block;
   vertical-align: bottom;
+}
+.pin {
+  position: absolute;
+  top: -49px;
+  left: 14.45em;
 }
 .note-container {
   margin-top: 10px;
@@ -177,4 +185,5 @@ small { font-size: 13px; }
     padding-left: 20px;
     padding-right: 20px;
   }
+  .pin { display: none; }
 }
