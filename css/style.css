@@ -139,12 +139,13 @@ p.lead {
   background: rgb(240, 62, 62);
   color: #fff;
   padding: 5px 20px;
-  width: 200px;
+  width: 230px;
   display: block;
   margin: 42px auto 0;
   border-radius: 3px;
   box-shadow: 2px 2px 0 rgb(104, 62, 62);
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 .button:hover {
   top: 1px;
