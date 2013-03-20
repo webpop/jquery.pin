@@ -8,8 +8,7 @@
       for (var i=0, len=elements.length; i<len; i++) {
         var $this = elements[i],
             data  = {};
-        
-        
+
         if ($(window).width() <= 940) {
           if ($this.parent().is(".pin-wrapper")) { $this.unwrap(); }
           $this.css({width: "", left: "", top: "", position: ""});
