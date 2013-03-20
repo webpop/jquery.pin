@@ -118,11 +118,34 @@
       </div>
     </footer>
     
-<a href="https://github.com/webpop/jquery.pin"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+    <a href="https://github.com/webpop/jquery.pin"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+    
+
+    <!-- Include jQuery and jquery.pin -->
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="jquery.pin.js"></script>
+    
+    <!-- PIN ALL THE THINGS! -->
     <script>
       $(".pinned").pin({containerSelector: ".container", minWidth: 940});
+    </script>
+    <!-- That's all - pretty easy, right? -->
+    
+    
+    
+    <!-- Analytics -->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-18439732-5']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
     </script>
   </body>
 </html>
