@@ -98,7 +98,7 @@ p.lead {
 .pin {
   position: absolute;
   top: -49px;
-  left: 14.45em;
+  right: -87px;
 }
 .note-container {
   margin-top: 10px;
