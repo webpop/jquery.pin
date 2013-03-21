@@ -176,7 +176,23 @@ p.lead {
   background: rgb(204, 34, 34);
   box-shadow: none;
 }
+
+.social-nav {
+  margin: 0;
+  position: absolute;
+  top: 265px;
+  left: 10px;
+  overflow: hidden;
+}
+.social { list-style: none; padding: 0; }
+.social li { margin: 5px 0 5px; }
+.social span { display: none; }
+
 small { font-size: 13px; }
+
+@media all and (max-width: 1135px) {
+  .social-nav { display: none; }
+}
 
 @media all and (max-width: 48em) {
   .left-col, .right-col { float: none; width: auto; }
@@ -185,5 +201,5 @@ small { font-size: 13px; }
     padding-left: 20px;
     padding-right: 20px;
   }
-  .pin { display: none; }
+  .pin { display: nonel }
 }

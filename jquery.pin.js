@@ -18,8 +18,9 @@
                     disabled = false;
                 }
 
-                var $full = options.containerSelector ? $this.closest(options.containerSelector) : $(document.body);
-                var offset = $full.offset();
+                var $container = options.containerSelector ? $this.closest(options.containerSelector) : $(document.body);
+                var offset = $this.offset();
+                var containerOffset = $container.offset();
                 var parentOffset = $this.offsetParent().offset();
 
                 if (!$this.parent().is(".pin-wrapper")) {
@@ -27,9 +28,9 @@
                 }
 
                 $this.data("pin", {
-                    from: offset.top,
-                    to: offset.top + $full.height() - $this.outerHeight(),
-                    end: offset.top + $full.height(),
+                    from: options.containerSelector ? containerOffset.top : offset.top,
+                    to: containerOffset.top + $container.height() - $this.outerHeight(),
+                    end: containerOffset.top + $container.height(),
                     parentTop: parentOffset.top
                 });
 
@@ -65,7 +66,7 @@
                         top: to - data.parentTop
                     }).css("position", "absolute");
                 } else {
-                    $this.css("position", "");
+                    $this.css({position: "", top: "", left: ""});
                 }
           }
         };
