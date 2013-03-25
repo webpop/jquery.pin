@@ -22,13 +22,11 @@
         <img src="images/pin.png" class="pin" width="400"/>
       </div>
     </header>
-    <div class="social-nav">
-      <ul class="social">
-        <li class="twitter"><a href="http://twitter.com/share?text=Pin%20Things%2C%20with%20jQuery.pin%20http%3A%2F%2Fwebpop.github.com%2Fjquery.pin%20%23webpop%2C%20%23jQuery"><i class="icon-twitter"></i><span>Share on Twitter</span></a></li>        
-        <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=http://webpop.github.com/jquery.pin"><i class="icon-facebook"></i><span>Share on Facebook</span></a></li>
-        <li class="gplus"><a href="https://plus.google.com/share?url=http://webpop.github.com/jquery.pin"><i class="icon-google-plus"></i><span>Share on Google+</span></a></li>
-      </ul>
-    </div>
+    <ul class="social">
+      <li class="twitter"><a href="http://twitter.com/share?text=Pin%20Things%2C%20with%20jQuery.pin%20http%3A%2F%2Fwebpop.github.com%2Fjquery.pin%20%23webpop%2C%20%23jQuery"><i class="icon-twitter"></i><span>Share on Twitter</span></a></li>        
+      <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=http://webpop.github.com/jquery.pin"><i class="icon-facebook"></i><span>Share on Facebook</span></a></li>
+      <li class="gplus"><a href="https://plus.google.com/share?url=http://webpop.github.com/jquery.pin"><i class="icon-google-plus"></i><span>Share on Google+</span></a></li>
+    </ul>
     <div class="wrapper">
       <h2 class="sub">Make your stuff stick!</h2>
       <section class="container clearfix">   
@@ -137,7 +135,6 @@
 
     <!-- PIN ALL THE THINGS! -->
     <script>
-      $(".social").pin();
       $(".pinned").pin({containerSelector: ".container", minWidth: 940});
     </script>
     <!-- That's all - pretty easy, right? -->

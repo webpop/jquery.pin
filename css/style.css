@@ -177,14 +177,7 @@ p.lead {
   box-shadow: none;
 }
 
-.social-nav {
-  margin: 0;
-  position: absolute;
-  top: 265px;
-  left: 10px;
-  overflow: hidden;
-}
-.social { list-style: none; padding: 0; }
+.social { position: fixed; top: 265px; left: 10px; list-style: none; padding: 0; margin: 0; }
 .social li { margin: 5px 0 5px; }
 .social span { display: none; }
 
