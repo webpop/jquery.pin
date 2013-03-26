@@ -215,7 +215,7 @@ p.lead {
 small { font-size: 13px; }
 
 @media all and (max-width: 1135px) {
-  .social-nav { display: none; }
+  .social { display: none; }
 }
 
 @media all and (max-width: 48em) {
@@ -225,5 +225,6 @@ small { font-size: 13px; }
     padding-left: 20px;
     padding-right: 20px;
   }
-  .pin { display: nonel }
+  .pin { display: none; }
+  .handwritten { display: none; }
 }
