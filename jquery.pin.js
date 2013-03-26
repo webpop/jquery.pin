@@ -1,7 +1,7 @@
 (function ($) {
     "use strict";
     $.fn.pin = function (options) {
-        var scrollY = 0, elements = [], disabled = false;
+        var scrollY = 0, elements = [], disabled = false, $window = $(window);
 
         options = options || {};
 
@@ -9,7 +9,7 @@
             for (var i=0, len=elements.length; i<len; i++) {
                 var $this = elements[i];
 
-                if (options.minWidth && $(window).width() <= options.minWidth) {
+                if (options.minWidth && $window.width() <= options.minWidth) {
                     if ($this.parent().is(".pin-wrapper")) { $this.unwrap(); }
                     $this.css({width: "", left: "", top: "", position: ""});
                     disabled = true;
@@ -42,7 +42,7 @@
         var onScroll = function () {
             if (disabled) { return; }
 
-            scrollY = window.scrollY;
+            scrollY = $window.scrollTop();
    
             for (var i=0, len=elements.length; i<len; i++) {          
                 var $this = $(elements[i]),
@@ -84,11 +84,11 @@
             $(this).data('pin', data);
         });
 
-        $(window).scroll(onScroll);
-        $(window).resize(function () { recalculateLimits(); });
+        $window.scroll(onScroll);
+        $window.resize(function () { recalculateLimits(); });
         recalculateLimits();
 
-        $(window).load(update);
+        $window.load(update);
 
         return this;
       };
