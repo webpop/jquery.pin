@@ -35,7 +35,7 @@
                 });
 
                 $this.css({width: $this.outerWidth()});
-                $this.parent().css("height", $this.outerHeight());          
+                $this.parent().css("height", $this.outerHeight());
             }
         };
 
