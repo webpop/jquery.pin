@@ -137,8 +137,37 @@ p.lead {
 .left-col img { width: 100%; height: auto; }
 .text-right { text-align: right; }
 .text-center { text-align: center; }
-.gallery .container { margin: 72px 0; }
+.handwritten { font-family: "Cabin Sketch"; font-size: 18px; font-weight: 400; opacity: 0.9; }
+.gallery .container { margin: 72px 0; position: relative; background: rgba(0,0,0,0.1); border: 1px dashed rgba(0,0,0,0.2); }
+.gallery .cat { text-align: center; margin: 20px; }
+.gallery .cat .cat-indicator {
+  margin-top: 10px;
+}
 .gallery img { border-radius: 3px; drop-shadow: 0 0 7px rgba(0,0,0,0.5); }
+.gallery .pinned-indicator {
+  position: relative;
+  top: 60px;
+  margin-top: -50px;
+  text-align: center;
+}
+.gallery .container-indicator {
+  position: absolute;
+  bottom: 50%;
+  right: -100px;
+  -webkit-transform: rotate(90deg);
+     -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.panel {
+  background: rgba(255,255,255,0.2);
+  padding: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+.panel h4 {
+  margin-top: 0;
+}
 .left-nav .left-col { width: 20%; }
 .left-nav .right-col { width: 80%; }
 .left-nav .nav {
@@ -180,6 +209,8 @@ p.lead {
 .social { position: fixed; top: 265px; left: 10px; list-style: none; padding: 0; margin: 0; }
 .social li { margin: 5px 0 5px; }
 .social span { display: none; }
+
+.relative { position: relative; }
 
 small { font-size: 13px; }
 
