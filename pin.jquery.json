@@ -1,0 +1,35 @@
+{
+    "name": "pin",
+    "title": "jQuery Pin",
+    "description": "jQuery plugin for pinning an element within a container.",
+    "keywords": [
+        "scroll",
+        "stick",
+        "sticky"
+    ],
+    "version": "1.0.1",
+    "author": {
+        "name": "Webpop",
+        "url": "http://www.webpop.com"
+    },
+    "maintainers": [
+        {
+          "name": "Mathias Biilmann Christensen",
+          "url": "http://mathias-biilmann.net"
+          "email": "info@mathias-biilmann.net"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/jquery/jquery-color/blob/2.1.2/MIT-LICENSE.txt"
+        }
+    ],
+    "bugs": "https://github.com/webpop/jquery.pin/issues",
+    "homepage": "webpop.github.com/jquery.pin",
+    "docs": "webpop.github.com/jquery.pin",
+    "download": "https://raw.github.com/webpop/jquery.pin/gh-pages/jquery.pin.js",
+    "dependencies": {
+        "jquery": ">=1.5"
+    }
+}
