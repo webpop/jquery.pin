@@ -7,7 +7,7 @@
         "stick",
         "sticky"
     ],
-    "version": "1.0.2",
+    "version": "1.0.3",
     "author": {
         "name": "Webpop",
         "url": "http://www.webpop.com"
@@ -26,8 +26,8 @@
         }
     ],
     "bugs": "https://github.com/webpop/jquery.pin/issues",
-    "homepage": "webpop.github.com/jquery.pin",
-    "docs": "webpop.github.com/jquery.pin",
+    "homepage": "http://webpop.github.com/jquery.pin",
+    "docs": "http://webpop.github.com/jquery.pin",
     "download": "https://raw.github.com/webpop/jquery.pin/gh-pages/jquery.pin.js",
     "dependencies": {
         "jquery": ">=1.5"
