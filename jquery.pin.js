@@ -12,6 +12,7 @@
                 if (options.minWidth && $window.width() <= options.minWidth) {
                     if ($this.parent().is(".pin-wrapper")) { $this.unwrap(); }
                     $this.css({width: "", left: "", top: "", position: ""});
+                    if (options.activeClass) { $this.removeClass(options.activeClass); }
                     disabled = true;
                     continue;
                 } else {
@@ -60,13 +61,16 @@
                         left: $this.offset().left,
                         top: 0
                     }).css("position", "fixed");
+                    if (options.activeClass) { $this.addClass(options.activeClass); }
                 } else if (scrollY >= to) {
                     $this.css({
                         left: "auto",
                         top: to - data.parentTop
                     }).css("position", "absolute");
+                    if (options.activeClass) { $this.addClass(options.activeClass); }
                 } else {
                     $this.css({position: "", top: "", left: ""});
+                    if (options.activeClass) { $this.removeClass(options.activeClass); }
                 }
           }
         };
