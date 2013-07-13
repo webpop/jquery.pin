@@ -64,7 +64,7 @@
                     if (options.activeClass) { $this.addClass(options.activeClass); }
                 } else if (scrollY >= to) {
                     $this.css({
-                        left: "auto",
+                        left: "",
                         top: to - data.parentTop
                     }).css("position", "absolute");
                     if (options.activeClass) { $this.addClass(options.activeClass); }
