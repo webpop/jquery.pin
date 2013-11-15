@@ -44,11 +44,19 @@
             if (disabled) { return; }
 
             scrollY = $window.scrollTop();
-   
+
+            var elmts = [];
             for (var i=0, len=elements.length; i<len; i++) {          
                 var $this = $(elements[i]),
-                    data  = $this.data("pin"),
-                    from  = data.from,
+                    data  = $this.data("pin");
+
+                if (!data) { // Removed element
+                  continue;
+                }
+
+                elmts.push($this); 
+                  
+                var from  = data.from,
                     to    = data.to;
               
                 if (from + $this.outerHeight() > data.end) {
@@ -73,6 +81,7 @@
                     if (options.activeClass) { $this.removeClass(options.activeClass); }
                 }
           }
+          elements = elmts;
         };
 
         var update = function () { recalculateLimits(); onScroll(); };
