@@ -34,7 +34,7 @@
                     enabled:  $container.height() >= $this.height()+$fixedHeaderOffset,
                     from: options.containerSelector ? containerOffset.top : offset.top,
                     to: containerOffset.top + $container.height() - $this.outerHeight() - $fixedHeaderOffset,
-                    end: containerOffset.top + $container.height() - $fixedHeaderOffset,
+                    end: containerOffset.top + $container.height() + $fixedHeaderOffset,
                     parentTop: parentOffset.top,
                     paddingTop: $fixedHeaderOffset,
                 });
