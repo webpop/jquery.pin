@@ -28,9 +28,15 @@
                     $this.wrap("<div class='pin-wrapper'>");
                 }
 
+                var pad = $.extend({
+                  top: 0,
+                  bottom: 0
+                }, options.padding || {});
+
                 $this.data("pin", {
-                    from: options.containerSelector ? containerOffset.top : offset.top,
-                    to: containerOffset.top + $container.height() - $this.outerHeight(),
+                    pad: pad,
+                    from: (options.containerSelector ? containerOffset.top : offset.top) - pad.top,
+                    to: containerOffset.top + $container.height() - $this.outerHeight() - pad.bottom,
                     end: containerOffset.top + $container.height(),
                     parentTop: parentOffset.top
                 });
@@ -67,13 +73,13 @@
                 if (from < scrollY && to > scrollY) {
                     !($this.css("position") == "fixed") && $this.css({
                         left: $this.offset().left,
-                        top: 0
+                        top: data.pad.top
                     }).css("position", "fixed");
                     if (options.activeClass) { $this.addClass(options.activeClass); }
                 } else if (scrollY >= to) {
                     $this.css({
                         left: "",
-                        top: to - data.parentTop
+                        top: to - data.parentTop + data.pad.top
                     }).css("position", "absolute");
                     if (options.activeClass) { $this.addClass(options.activeClass); }
                 } else {
