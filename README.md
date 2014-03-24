@@ -10,9 +10,12 @@ Include jquery and jquery pin at the bottom of your html. Then pin any element y
 
     $(".pinned").pin()
 
-To make a pinned element stay within an outer container, use the containerSelector option:
+To make a pinned element stay within an outer container, use the containerSelector option. If you use a fixed header on your page and want the pin to be triggered as soon as your element hits it, use the fixedHeaderSelector option:
 
-    $(".pinned").pin({containerSelector: ".container"})
+    $(".pinned").pin({
+        containerSelector: ".container",
+        fixedHeaderSelector: "header"
+        })
 
 That's it - go pin all the things!
 
