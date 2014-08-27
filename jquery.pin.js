@@ -62,8 +62,8 @@
 
                 elmts.push($this); 
                   
-                var from  = data.from,
-                    to    = data.to;
+                var from = data.from - data.pad.bottom,
+                    to = data.to - data.pad.top;
               
                 if (from + $this.outerHeight() > data.end) {
                     $this.css('position', '');
