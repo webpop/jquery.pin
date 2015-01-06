@@ -6,16 +6,13 @@
   "authors": [
     "Mathias Biilmann <info@mathias-biilmann.net>"
   ],
+  "dependencies": {
+    "jquery": ">=1.8.0"
+  },
   "description": "jQuery.Pin is a plugin to pin any element within a container",
   "keywords": [
     "pin",
-    "sticky",
-    "jquery",
-    "sticky",
-    "plugin",
-    "jquery",
-    "pin",
-    "plugin"
+    "sticky"
   ],
   "license": "The BSD 2-Clause License",
   "ignore": [
