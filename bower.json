@@ -1,0 +1,28 @@
+{
+  "name": "jquery.pin",
+  "main": "jquery.pin.js",
+  "version": "1.0.3",
+  "homepage": "https://github.com/webpop/jquery.pin",
+  "authors": [
+    "Mathias Biilmann <info@mathias-biilmann.net>"
+  ],
+  "description": "jQuery.Pin is a plugin to pin any element within a container",
+  "keywords": [
+    "pin",
+    "sticky",
+    "jquery",
+    "sticky",
+    "plugin",
+    "jquery",
+    "pin",
+    "plugin"
+  ],
+  "license": "The BSD 2-Clause License",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
