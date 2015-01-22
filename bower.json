@@ -1,7 +1,7 @@
 {
   "name": "jquery.pin",
   "main": "jquery.pin.js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "homepage": "http://webpop.github.io/jquery.pin/",
   "authors": [
     "Mathias Biilmann <info@mathias-biilmann.net>"
