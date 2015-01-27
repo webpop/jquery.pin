@@ -81,7 +81,7 @@
                         left: "",
                         top: to - data.parentTop + data.pad.top
                     }).css("position", "absolute");
-                    if (options.activeClass) { $this.addClass(options.activeClass); }
+                    if (options.activeClass) { $this.removeClass(options.activeClass); }
                 } else {
                     $this.css({position: "", top: "", left: ""});
                     if (options.activeClass) { $this.removeClass(options.activeClass); }
