@@ -33,13 +33,15 @@
                   bottom: 0
                 }, options.padding || {});
 
-                $this.data("pin", {
-                    pad: pad,
-                    from: (options.containerSelector ? containerOffset.top : offset.top) - pad.top,
-                    to: containerOffset.top + $container.height() - $this.outerHeight() - pad.bottom,
-                    end: containerOffset.top + $container.height(),
-                    parentTop: parentOffset.top
-                });
+                if ($window.scrollTop() != offset.top) {
+                    $this.data("pin", {
+                        pad: pad,
+                        from: (options.containerSelector ? containerOffset.top : offset.top) - pad.top,
+                        to: containerOffset.top + $container.height() - $this.outerHeight() - pad.bottom,
+                        end: containerOffset.top + $container.height(),
+                        parentTop: parentOffset.top
+                    });
+                }
 
                 $this.css({width: $this.outerWidth()});
                 $this.parent().css("height", $this.outerHeight());
