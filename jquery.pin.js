@@ -102,7 +102,7 @@
         $window.resize(function () { recalculateLimits(); });
         recalculateLimits();
 
-        $window.load(update);
+        $window.on("load", update);
 
         return this;
     };
