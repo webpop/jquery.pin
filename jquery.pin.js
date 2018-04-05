@@ -9,7 +9,7 @@
             for (var i=0, len=elements.length; i<len; i++) {
                 var $this = elements[i];
 
-                if (options.minWidth && $window.width() <= options.minWidth) {
+                if ((options.minWidth && $window.width() <= options.minWidth) || (options.minHeight && $window.height() <= options.minHeight)) {
                     if ($this.parent().is(".pin-wrapper")) { $this.unwrap(); }
                     $this.css({width: "", left: "", top: "", position: ""});
                     if (options.activeClass) { $this.removeClass(options.activeClass); }
